@@ -19,9 +19,15 @@ clpv4 = clpv4(server)
 scratch = scratch(server)
 clpv4.enable_motd = True
 clpv4.motd_message = "INSECURE! Be careful what you say! - Bigscaryeaster"
-
+@server.on_connect
+async def on_connect(client):
+    print(client, "Connected!")
+@server.on_disconnect
+async def on_disconnect(client):
+    print(client, "Disconnected!")
 # Start the server!
-server.run(ip="127.0.0.1", port=3000)
+server.run(ip="10.0.1.197", port=3000)
+
 
 # This is a template I used and you can use too! - bigscaryeaster
 # This is also running forever!
