@@ -6,7 +6,6 @@ from cloudlink.server.protocols import clpv4, scratch
 
 # Instantiate the server object
 server = server()
-server.enable_ssl(certfile="cert.pem", keyfile="privkey.pem")
 
 # Set logging level
 server.logging.basicConfig(
@@ -27,8 +26,7 @@ async def on_connect(client):
 async def on_disconnect(client):
     print(client, "Disconnected!")
 # Start the server!
-server.run(ip="172.17.0.1" \
-"", port=3000)
+server.run(ip="10.0.0.54", port=3000)
 
 
 # This is a template I used and you can use too! - bigscaryeaster
