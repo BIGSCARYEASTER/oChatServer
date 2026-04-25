@@ -26,7 +26,7 @@ async def on_connect(client):
 async def on_disconnect(client):
     print(client, "Disconnected!")
 # Start the server!
-server.run(ip="10.0.0.54", port=3000)
+server.run(ip="172.17.0.1", port=3000)
 
 
 # This is a template I used and you can use too! - bigscaryeaster
