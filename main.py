@@ -6,6 +6,7 @@ from cloudlink.server.protocols import clpv4, scratch
 
 # Instantiate the server object
 server = server()
+server.enable_ssl(certfile="cert.pem", keyfile="privkey.pem")
 
 # Set logging level
 server.logging.basicConfig(
